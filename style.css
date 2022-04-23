@@ -1,0 +1,33 @@
+body {
+    background-color: black;
+    background-image: url(./images/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+}
+
+.cabeçalho {
+    width: 90%;
+    height: 80px;
+    margin: auto;
+    background-color: black;
+    padding: 5px;
+    color: white;
+}
+
+li {
+    float: right;
+    margin: 10px;
+
+}
+
+ul {
+    list-style: none;
+    float: right;
+}
+
+img {
+    float: left;
+    width: 100px
+}
