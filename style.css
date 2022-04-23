@@ -1,33 +1,40 @@
 body {
     background-color: black;
-    background-image: url(./images/background.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-
 
 }
 
-.cabeçalho {
-    width: 90%;
-    height: 80px;
-    margin: auto;
-    background-color: black;
-    padding: 5px;
+header {
+    position: fixed;
+    width: 95%;
+    /*cor apenas para visualização de margens, será removida*/
+    background-color: gray;
     color: white;
+    margin: auto;
+}
+
+img {
+    float: left;
+    width: 60px;
+    vertical-align: middle;
+
+
 }
 
 li {
     float: right;
-    margin: 10px;
+    padding: 5px;
 
 }
 
 ul {
     list-style: none;
-    float: right;
 }
 
-img {
-    float: left;
-    width: 100px
+.intro-container{
+    padding: 0;
+    margin: 0;
+    height: 1000px;
+    background-image: url(./images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
