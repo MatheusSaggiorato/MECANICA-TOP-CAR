@@ -26,6 +26,7 @@ body {
     margin-right: 10px;
     list-style: none;
     float: right;
+    cursor: pointer;
 }
 
 .menu :hover{
@@ -49,21 +50,34 @@ li {
 }
 
 .whatsapp {
-    display: block;
-    position: relative;
+    overflow: hidden;
     margin: auto;
-    width: 330px;
+    width: 380px;
     height: 100px;
-    border: 1px solid green;
     font-size: 22px;
-    text-align: center;
+    background-color: darkgreen;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+}
+
+.whatsapp:hover{
+    box-shadow:
+    0 0 50px 50px orangered inset,
+    0 0 10px green;
 }
 
 
 .button {
-    width: 71px;
-    padding-bottom: 30px;
+    margin-top: 15px;
+    float: left;
+    width: 70px;
 }
+
+.clique {
+    text-align: center;
+    margin-top: 24px;
+}
+
 
 .intro-container {
     font-size: 30PX;
