@@ -1,9 +1,10 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url(./images/background3.jpg);
+    background-image: url(./images/background.jpg);
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: top;
     background-color: black;
     color: WHITE;
 
@@ -13,42 +14,72 @@ body {
     overflow: hidden;
     margin: auto;
     width: 80%;
-    padding: 10px;
+    height: 90px;
+    font-size: 22px;
+    background-color: black;
     position: sticky;
     top: 0;
-    font-size: 18px;
-    background-color: #4444;
 }
 
 .menu {
+    margin-top: 32px;
+    margin-right: 10px;
     list-style: none;
-    margin: 0;
-    padding: 0;
     float: right;
+}
 
+.menu :hover{
+    color: orangered;
 }
 
 li {
+    padding-left: 40px;
     float: left;
     color: white;
-    margin-right: 15px;
 }
 
 .logo {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
     float: left;
-    width: 90px;
+    width: 70px;
 
 
+}
+
+.whatsapp {
+    display: block;
+    position: relative;
+    margin: auto;
+    width: 330px;
+    height: 100px;
+    border: 1px solid green;
+    font-size: 22px;
+    text-align: center;
+}
+
+
+.button {
+    width: 71px;
+    padding-bottom: 30px;
 }
 
 .intro-container {
     font-size: 30PX;
     text-align: center;
     padding: 50px;
-    margin-top: 150px;
 }
 
-.duplas {
+.image1 {
+    margin-left: 80px;
+    margin-top: 150px;
+    display: block;
+    width: 250px;
+}
+
+.image2 {
+    margin-left: 80px;
     display: block;
     width: 250px;
 }
