@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -21,7 +25,7 @@ body {
     top: 0;
 }
 
-.menu {
+.navmenu {
     margin-top: 32px;
     margin-right: 10px;
     list-style: none;
@@ -29,8 +33,8 @@ body {
     cursor: pointer;
 }
 
-.menu :hover{
-    color: orangered;
+.navmenu :hover {
+    color: rgb(237, 102, 27);
 }
 
 li {
@@ -49,51 +53,69 @@ li {
 
 }
 
-.whatsapp {
+.buttonwhats {
+    transform: .2s;
     overflow: hidden;
     margin: auto;
-    width: 380px;
-    height: 100px;
+    width: 400px;
+    height: 90px;
     font-size: 22px;
-    background-color: darkgreen;
+    background-color: rgba(255, 42, 42, 0.9);
     cursor: pointer;
-    transition: 250ms ease-in-out;
+    border-radius: 25px;
 }
 
-.whatsapp:hover{
-    box-shadow:
-    0 0 50px 50px orangered inset,
-    0 0 10px green;
+.buttonwhats:hover {
+    -ms-transform: scale(1.2);
+    /* IE 9 */
+    -webkit-transform: scale(1.2);
+    /* Safari 3-8 */
+    transform: scale(1.2);
+    box-shadow: 0px 0px 30px rgb(255, 0, 0);
+    -moz-box-shadow: 0px 0px 30px rgb(255, 0, 0);
+    -webkit-box-shadow: 0px 0px 30px rgb(255, 0, 0);
+
 }
 
 
-.button {
-    margin-top: 15px;
+.whatsapp {
+    margin: 10px;
     float: left;
     width: 70px;
 }
 
-.clique {
+.buttontext {
+    margin-top: 19px;
     text-align: center;
-    margin-top: 24px;
 }
 
 
-.intro-container {
-    font-size: 30PX;
+.intro-container {font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-size: 20px;
     text-align: center;
     padding: 50px;
 }
 
-.image1 {
+.images {
+
+    margin-top: 200px;
     margin-left: 80px;
-    margin-top: 150px;
+    height: 1000px;
+}
+
+.image1 {
     display: block;
     width: 250px;
 }
 
 .image2 {
-    margin-left: 80px;
     display: block;
     width: 250px;
+    margin-top: 200px;
+}
+
+
+.textimages {
+    display: inline;
 }
