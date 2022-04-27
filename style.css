@@ -11,13 +11,12 @@ body {
     background-position: top;
     background-color: black;
     color: WHITE;
-
 }
 
 .header {
     overflow: hidden;
     margin: auto;
-    width: 80%;
+    width: 90%;
     height: 90px;
     font-size: 22px;
     background-color: black;
@@ -49,8 +48,6 @@ li {
     margin-left: 10px;
     float: left;
     width: 70px;
-
-
 }
 
 .buttonwhats {
@@ -74,9 +71,7 @@ li {
     box-shadow: 0px 0px 30px rgb(255, 0, 0);
     -moz-box-shadow: 0px 0px 30px rgb(255, 0, 0);
     -webkit-box-shadow: 0px 0px 30px rgb(255, 0, 0);
-
 }
-
 
 .whatsapp {
     margin: 10px;
@@ -89,7 +84,6 @@ li {
     text-align: center;
 }
 
-
 .intro-container {font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-size: 20px;
@@ -97,25 +91,23 @@ li {
     padding: 50px;
 }
 
+.container {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: 200px;
+}
+
 .images {
-
-    margin-top: 200px;
-    margin-left: 80px;
-    height: 1000px;
-}
-
-.image1 {
-    display: block;
+    margin: auto;
+    text-align: center;
     width: 250px;
+    margin-top: 0;
 }
 
-.image2 {
-    display: block;
-    width: 250px;
-    margin-top: 200px;
-}
-
-
-.textimages {
-    display: inline;
+.text {
+    margin-top: 0;
+    margin-left: 20px;
+    text-align: justify;
+    font-size: 26px;
 }
