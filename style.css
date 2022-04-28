@@ -1,65 +1,69 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
     margin: 0;
     padding: 0;
     background-image: url(./images/background.jpg);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: top;
     background-color: black;
-    color: WHITE;
+    color: white;
 }
+
+::-webkit-scrollbar { width: 8px;}
+::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.6); }
+::-webkit-scrollbar-thumb { background: rgba(194, 32, 39, 1); }
+
 
 .header {
-    overflow: hidden;
-    margin: auto;
-    width: 90%;
-    height: 90px;
-    font-size: 22px;
-    background-color: black;
     position: sticky;
     top: 0;
+    box-sizing: border-box;
+    margin: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 90%;
+    height: 81px;
+    background-color: black;
 }
 
-.navmenu {
-    margin-top: 32px;
-    margin-right: 10px;
-    list-style: none;
+.nav-menu {
     float: right;
+    font-size: 20px;
+    list-style: none;
     cursor: pointer;
+    margin-top: 29px;
+    margin-right: 10px;
 }
 
-.navmenu :hover {
+.nav-menu :hover {
     color: rgb(237, 102, 27);
 }
 
 li {
-    padding-left: 40px;
     float: left;
+    padding-left: 15px;
     color: white;
 }
 
 .logo {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    float:left;
+    width: 71px;
+    margin-top: 5px;
     margin-left: 10px;
-    float: left;
-    width: 70px;
 }
 
 .buttonwhats {
+    box-sizing: border-box;
     transform: .2s;
     overflow: hidden;
     margin: auto;
-    width: 400px;
-    height: 90px;
-    font-size: 22px;
+    padding: 8px;
+    width: 300px;
+    height: auto;
+    font-size: 18px;
     background-color: rgba(255, 42, 42, 0.9);
     cursor: pointer;
-    border-radius: 25px;
+    border-radius: 18px;
+    vertical-align: middle;
 }
 
 .buttonwhats:hover {
@@ -74,40 +78,68 @@ li {
 }
 
 .whatsapp {
-    margin: 10px;
     float: left;
-    width: 70px;
+    width: 45px;
 }
 
 .buttontext {
-    margin-top: 19px;
     text-align: center;
 }
 
-.intro-container {font-family: 'Montserrat', sans-serif;
+.intro-container {
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-size: 20px;
     text-align: center;
-    padding: 50px;
+    margin: 50px;
 }
 
-.container {
-    display: flex;
-    width: 80%;
-    margin: auto;
+#empresa {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-size: 40px;
+    text-align: center;
     margin-top: 200px;
 }
 
-.images {
+.main-container {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    text-align: justify;
+    font-size: 26px;
+}
+
+.rally {
     margin: auto;
     text-align: center;
     width: 250px;
     margin-top: 0;
+    margin-right: 20px;
 }
 
-.text {
-    margin-top: 0;
-    margin-left: 20px;
-    text-align: justify;
-    font-size: 26px;
+.containericons {
+    box-sizing: border-box;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    border: 1px solid red;
+}
+
+.icons {
+    width: 80px;
+}
+
+#localização {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.maps {
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
