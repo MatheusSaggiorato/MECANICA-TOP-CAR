@@ -1,3 +1,7 @@
+html, body {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -12,19 +16,20 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(218, 218, 218, 0.6);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(194, 32, 39, 1);
+    background: #EA5D10;
 }
 
 
 header {
+    text-decoration: none;
     position: sticky;
     top: 0;
     box-sizing: border-box;
@@ -44,16 +49,23 @@ header {
     margin-right: 10px;
 }
 
-.nav-menu :hover {
-    color: rgb(237, 102, 27);
-}
-
 li {
+    text-decoration: none;
     float: left;
     list-style: none;
     padding: 10px;
     margin: 5px;
     color: white;
+}
+
+.linksmenu {
+    text-decoration: none;
+    color: white;
+}
+
+.linksmenu:hover {
+    text-decoration: none;
+    color:#EA5D10;
 }
 
 .logo {
@@ -69,10 +81,10 @@ li {
     overflow: hidden;
     margin: auto;
     padding: 8px;
-    width: 300px;
+    width: 320px;
     height: auto;
     font-size: 18px;
-    background-color: rgba(255, 42, 42, 0.9);
+    background-color: #EA5D10;
     cursor: pointer;
     border-radius: 18px;
     vertical-align: middle;
@@ -84,24 +96,27 @@ li {
     -webkit-transform: scale(1.2);
     /* Safari 3-8 */
     transform: scale(1.2);
-    box-shadow: 0px 0px 30px rgb(255, 0, 0);
-    -moz-box-shadow: 0px 0px 30px rgb(255, 0, 0);
-    -webkit-box-shadow: 0px 0px 30px rgb(255, 0, 0);
+    box-shadow: 0px 0px 30px #EA5D10;
+    -moz-box-shadow: 0px 0px 30px #EA5D10;
+    -webkit-box-shadow: 0px 0px 30px #EA5D10;
 }
 
 .whatsapp {
     float: left;
-    width: 45px;
+    width: 40px;
+    margin-right: 5px;
 }
 
 .buttontext {
+    text-decoration: none;
+    color: white;
     text-align: center;
 }
 
 .intro-container {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
     margin: 50px;
 }
@@ -109,14 +124,27 @@ li {
 #sobre {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-size: 40px;
+    font-size: 30px;
+    font-weight: bold;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 80px;
+    text-shadow: 0px 0px 7px #EA5D10;
 }
 
-.main-container {
+#sobre::after {
+    content: '';
+    width: 200px;
+    height: 4px;
+    background-color: #EA5D10;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 40%;
+}
+
+.sobre-container {
     display: flex;
-    width: 80%;
+    width: 90%;
     margin: auto;
     margin-top: 50px;
     text-align: justify;
@@ -132,52 +160,128 @@ li {
 #serviços {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-size: 40px;
+    font-size: 30px;
+    font-weight: bold;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 80px;
+    text-shadow: 0px 0px 7px #EA5D10;
 }
 
-.containericons {
-    display: flex;
-    flex: wrap;
+#serviços::after {
+    content: '';
+    width: 200px;
+    height: 4px;
+    background-color: #EA5D10;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 40%;
+}
+
+.serviços-container {
     width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.container-icons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
     height: auto;
     margin: auto;
+    margin-top: 30px;
+}
+
+.quadro-icons {
+    transform: .2s;
+    overflow: hidden;
+    flex: 1 1 160px;
     box-sizing: border-box;
-    border: 1px solid red;
+    padding-top: 15px;
+    text-align: center;
+    color: black;
+    font-size: 14px;
+    height: 100px;
+    background-color: beige;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.quadro-icons:hover {
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari 3-8 */
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px rgb(94, 94, 94);
+    -moz-box-shadow: 0px 0px 30px rgb(94, 94, 94);
+    -webkit-box-shadow: 0px 0px 30px rgb(94, 94, 94);
 }
 
 .icons {
-    flex: 1 1 150px;
-    margin: 20px;
+    overflow: hidden;
+    margin-left: 50%;
+    margin-bottom: 10px;
+    transform: translateX(-50%);
+    display: flex;
     width: 40px;
 }
 
 #clientes {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-size: 40px;
+    font-size: 30px;
+    font-weight: bold;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 80px;
+    text-shadow: 0px 0px 7px #EA5D10;
 }
 
-.depoimento {
+#clientes::after {
+    content: '';
+    width: 200px;
+    height: 4px;
+    background-color: #EA5D10;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 40%;
+}
+
+.container-depoimento {
     display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    display: flex;
+    width: 90%;
 
 }
 
-.depoimentos {
+.quadro-depoimentos {
+    flex: 1 1 150px;
     background-color: white;
     box-sizing: content-box;
-    padding: 30px 30px 0 30px;
-    margin: 30px 15px;
+    padding: 20px;
+    margin: 20px 5px;
     text-align: center;
-    width: 400px;
-    min-height: 220px;
-    box-shadow: 0px 2px 12px rgb(0 0 0 / 8%);
+    width: auto;
     color: rgb(53, 52, 52);
     font-size: 18px;
     font-weight: bold;
+}
+
+.quadro-depoimentos:hover {
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari 3-8 */
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px rgb(94, 94, 94);
+    -moz-box-shadow: 0px 0px 30px rgb(94, 94, 94);
+    -webkit-box-shadow: 0px 0px 30px rgb(94, 94, 94);
 }
 
 .quote-sign-right {
@@ -191,22 +295,56 @@ li {
 #contato {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-size: 40px;
+    font-size: 30px;
+    font-weight: bold;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 80px;
+    text-shadow: 0px 0px 7px #EA5D10;
+}
+
+#contato::after {
+    content: '';
+    width: 200px;
+    height: 4px;
+    background-color: #EA5D10;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 40%;
+}
+
+.contato-container {
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    text-align: justify;
+    font-size: 18px;
 }
 
 #localização {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-size: 40px;
+    font-size: 30px;
+    font-weight: bold;
     text-align: center;
-    margin-top: 200px;
+    margin-top:  80px;
+    text-shadow: 0px 0px 7px #EA5D10;
+}
+
+#localização::after {
+    content: '';
+    width: 200px;
+    height: 4px;
+    background-color: #EA5D10;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 40%;
 }
 
 .maps {
-    margin-left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
+    height: 400px;
     margin-bottom: 0;
 }
 
@@ -217,7 +355,7 @@ footer {
     margin-top: -4px;
     padding: 5px 20px 20px 20px;
     background-color: black;
-    font-family: 'Open Sans', sans-serif;
+    
     text-align: center;
 
 }
@@ -228,4 +366,92 @@ footer {
 
 .credits {
     margin-top: 20px;
+}
+
+.whatsapp-fixed {
+    position: fixed;
+    display: flex;
+    bottom: 80px;
+    height: 80px;
+    right: 20px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: 250ms;
+    border-radius: 50%;
+}
+
+@keyframes anima {
+    0%{
+        transform: scale(1);
+    }
+
+    100%{
+        transform: scale(1.1);
+        box-shadow: 0px 0px 30px #29A71A;
+        -moz-box-shadow: 0px 0px 30px #29A71A;
+        -webkit-box-shadow: 0px 0px 30px #29A71A;
+    }
+}
+@keyframes anima2 {
+    0%{
+        transform: scale(1);
+    }
+
+    100%{
+        transform: scale(1.3);
+        box-shadow: 0px 0px 30px #29A71A;
+        -moz-box-shadow: 0px 0px 30px #29A71A;
+        -webkit-box-shadow: 0px 0px 30px #29A71A;
+    }
+}
+
+.whatsapp-fixed {
+    animation-name: anima;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.whatsapp-fixed:hover {
+    animation-name: anima2;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    bottom: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(105, 105, 105);
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: 250ms;
+}
+
+.back-to-top::after {
+    content: "↑";
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    transition: margin-top 250ms;
+    margin-top: 3px;
+}
+
+.back-to-top:hover::after {
+    margin-top: -8px;
+}
+
+.back-to-top:hover {
+    background-color: #EA5D10;
 }
