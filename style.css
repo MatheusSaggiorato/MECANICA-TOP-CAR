@@ -72,20 +72,13 @@ li {
 }
 
 .title {
-    display: inline-block;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 40px;
-    font-weight: bold;
     text-align: center;
-    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
     margin-top: 30px;
     text-shadow: 2px 2px 2px #EA5D10;
-    background-color: #ffffff10;
-    backdrop-filter: blur(3px);
-    border-radius: 20px;
-    padding: 20px;
 }
 
 .buttonwhats {
@@ -366,13 +359,10 @@ li {
     font-size: 18px;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
-    margin: 10px;
+    margin: 3px;
+    padding: 15px;
     border-radius: 10px;
-}
-
-.divisórias {
-    border-right: 4px solid white;
-    border-radius: 0;
+    border: 1px solid white;
 }
 
 .form-control {
@@ -542,11 +532,9 @@ footer {
 @media screen and (max-width: 750px) {
 
     body {
+        margin: auto;
         overflow-x: hidden;
-        }
-
-    .buttonwhats {
-        width: 80%;
+        width: 100%;
     }
 
     .logo {
@@ -554,7 +542,7 @@ footer {
     }
 
     .title {
-        font-size: 25px;
+        font-size: 30px;
     }
     
     .rally {
@@ -564,6 +552,20 @@ footer {
 
     .whatsapp-fixed {
         height: 50px;
+    }
+
+    .buttontext {
+        text-decoration: none;
+        color: white;
+        float: right;
+    }
+
+}
+
+@media screen and (max-width: 520px) {
+
+    .buttonwhats {
+        width: 80%;
     }
 
 }
