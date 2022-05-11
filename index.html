@@ -14,18 +14,21 @@
     <title>Mecânica Top Car</title>
 </head>
 
-<header>
-    <img class="logo" src="images/logooriginal.png" alt="logo mecânica top car">
-    <ul class="nav-menu">
-        <li><a class="linksmenu" href="#sobre">SOBRE</li></a>
-        <li><a class="linksmenu" href="#serviços">SERVIÇOS</li></a>
-        <li><a class="linksmenu" href="#clientes">CLIENTES</li></a>
-        <li><a class="linksmenu" href="#contato">CONTATO</li></a>
-        <li><a class="linksmenu" href="#localização">LOCALIZAÇÃO</li></a>
-    </ul>
-</header>
-
 <body>
+
+    <header>
+
+        <img class="logo" src="images/logooriginal.png" alt="logo mecânica top car">
+        <nav>
+            <ul class="menu">
+                <li><a class="linksmenu" href="#sobre">SOBRE</li></a>
+                <li><a class="linksmenu" href="#serviços">SERVIÇOS</li></a>
+                <li><a class="linksmenu" href="#clientes">CLIENTES</li></a>
+                <li><a class="linksmenu" href="#contato">CONTATO</li></a>
+                <li><a class="linksmenu" href="#localização">LOCALIZAÇÃO</li></a>
+            </ul>
+        </nav>
+    </header>
 
     <h1 class="title">TÍTULO DA PÁGINA!</h1>
 
@@ -39,28 +42,25 @@
         </a>
     </button>
 
-    <h1 id="sobre">SOBRE A TOP CAR</h1>
+    <h1 id="sobre" class="tópicos">SOBRE A TOP CAR</h1>
 
     <div class="sobre-container">
-        <div>
         <img class="rally" src="images/rally.jpg" alt="foto rally top car">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type
-        specimen book. It has survived not only five centuries, but also the leap into
-        electronic typesetting, remaining essentially unchanged. It was popularised in
-        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-        and more recently with desktop publishing software like Aldus PageMaker including
-        versions of Lorem Ipsum. It has survived not only five centuries, but also the leap into
-        electronic typesetting, remaining essentially unchanged. It was popularised in
-        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-        and more recently with desktop publishing software like Aldus PageMaker including
-        versions of Lorem Ipsum.
-        </div>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            ILorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type
+            specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in
+            the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus PageMaker including
+            versions of Lorem Ipsum. It has survived not only five centuries, but also the leap into
+            electronic typesetting.
+        </p>
     </div>
 
     <div class="serviços-container">
-        <h1 id="serviços">SERVIÇOS</h1>
+        <h1 id="serviços" class="tópicos">SERVIÇOS</h1>
         <div class="text-services">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
@@ -71,28 +71,13 @@
         <section class="container-icons">
 
             <div class="quadro-icons">
-                <img class="icons" src="images/injeção.png" alt="icon injeção eletrônica">
-                INJEÇÃO ELETRÔNICA
-            </div>
-
-            <div class="quadro-icons">
                 <img class="icons" src="images/disco-de-freio.png" alt="freios">
                 FREIOS
             </div>
 
             <div class="quadro-icons">
-                <img class="icons" src="images/eletrica.png" alt="bateria">
-                AUTO-ELÉTRICA
-            </div>
-
-            <div class="quadro-icons">
                 <img class="icons" src="images/embreagem.png" alt="embreagem">
                 EMBREAGEM
-            </div>
-
-            <div class="quadro-icons">
-                <img class="icons" src="images/motor.png" alt="motor">
-                MOTOR EM GERAL
             </div>
 
             <div class="quadro-icons">
@@ -108,12 +93,29 @@
             <div class="quadro-icons">
                 <img class="icons" src="images/transmissao.png" alt="transmissão">
                 TRANSMISSÃO
+
             </div>
+
+            <div class="quadro-icons">
+                <img class="icons" src="images/motor.png" alt="motor">
+                MOTOR EM GERAL
+            </div>
+
+            <div class="quadro-icons">
+                <img class="icons" src="images/eletrica.png" alt="bateria">
+                AUTO-ELÉTRICA
+            </div>
+
+            <div class="quadro-icons">
+                <img class="icons" src="images/injeção.png" alt="icon injeção eletrônica">
+                INJEÇÃO ELETRÔNICA
+            </div>
+
         </section>
 
     </div>
 
-    <h1 id="clientes">CLIENTES</h1>
+    <h1 id="clientes" class="tópicos">CLIENTES</h1>
 
     <section class="container-depoimento">
 
@@ -151,7 +153,7 @@
         </div>
     </section>
 
-    <h1 id="contato">CONTATO</h1>
+    <h1 id="contato" class="tópicos">CONTATO</h1>
 
     <section class="contato-container">
 
@@ -190,17 +192,12 @@
                 placeholder="*Telefone" data-rule="minlen:4" data-msg="Campo obrigatório" required="required">
             <textarea class="form-control" name="mensagem" rows="5" data-rule="required" data-msg="Campo obrigatório"
                 placeholder="*Mensagem" required="required"></textarea>
-            <h4>Quanto é
-                2+5? <small>(Pergunta anti-spam)</small></h4>
-            <div class="form-group">
-                <input name="soma" type="tel" id="name" class="form-control" placeholder="*Soma" required="required">
-            </div>
             <button class="form-button">Enviar</button>
         </form>
     </section>
 
 
-    <h1 id="localização">LOCALIZAÇÃO</h1>
+    <h1 id="localização" class="tópicos">LOCALIZAÇÃO</h1>
 
     <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3513.
     518808820668!2d-52.375477249877505!3d-28.282604158444673!2m3!1f0!2f0!

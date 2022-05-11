@@ -42,16 +42,23 @@ header {
     z-index: 999;
 }
 
-.nav-menu {
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
     font-size: 18px;
     cursor: pointer;
 }
 
 li {
-    text-decoration: none;
     float: left;
     list-style: none;
     padding: 5px;
+    margin: 5px;
+    border: 1px solid #EA5D10;
+    border-radius: 10px;
 }
 
 .linksmenu {
@@ -60,9 +67,8 @@ li {
     font-weight: bold;
 }
 
-.linksmenu:hover {
-    text-decoration: none;
-    color: #EA5D10;
+li:hover {
+    background-color: #EA5D10;
 }
 
 .logo {
@@ -130,7 +136,7 @@ li {
     text-shadow: 0px 0px 7px #EA5D10;
 }
 
-#sobre::after {
+.tópicos::after {
     content: '';
     width: 200px;
     height: 4px;
@@ -144,6 +150,7 @@ li {
 .sobre-container {
     display: block;
     width: 90%;
+    height: auto;
     margin: auto;
     text-align: justify;
     font-size: 18px;
@@ -170,19 +177,8 @@ li {
     text-shadow: 0px 0px 7px #EA5D10;
 }
 
-#serviços::after {
-    content: '';
-    width: 200px;
-    height: 4px;
-    background-color: #EA5D10;
-    display: block;
-    margin: auto;
-    margin-top: 10px;
-    border-radius: 40%;
-}
-
 .serviços-container {
-    width: 80%;
+    width: 90%;
     margin: auto;
     text-align: justify;
     font-size: 18px;
@@ -198,7 +194,7 @@ li {
 .container-icons {
     display: flex;
     flex-wrap: wrap;
-    width: 95%;
+    width: 90%;
     height: auto;
     margin: auto;
     margin-top: 30px;
@@ -207,7 +203,7 @@ li {
 .quadro-icons {
     transform: .2s;
     overflow: hidden;
-    flex: 1 1 160px;
+    flex: 1 1 200px;
     box-sizing: border-box;
     padding-top: 15px;
     text-align: center;
@@ -249,17 +245,6 @@ li {
     text-shadow: 0px 0px 7px #EA5D10;
 }
 
-#clientes::after {
-    content: '';
-    width: 200px;
-    height: 4px;
-    background-color: #EA5D10;
-    display: block;
-    margin: auto;
-    margin-top: 10px;
-    border-radius: 40%;
-}
-
 .container-depoimento {
     display: flex;
     flex-wrap: wrap;
@@ -280,6 +265,7 @@ li {
     color: rgb(53, 52, 52);
     font-size: 18px;
     font-weight: bold;
+    border-radius: 10px;
 }
 
 .quadro-depoimentos:hover {
@@ -309,17 +295,6 @@ li {
     text-align: center;
     margin-top: 80px;
     text-shadow: 0px 0px 7px #EA5D10;
-}
-
-#contato::after {
-    content: '';
-    width: 200px;
-    height: 4px;
-    background-color: #EA5D10;
-    display: block;
-    margin: auto;
-    margin-top: 10px;
-    border-radius: 40%;
 }
 
 .contato-container {
@@ -372,12 +347,16 @@ li {
     margin: 10px;
     width: 90%;
     margin-left: 0;
+    border-radius: 10px;
+    border: none;
 }
 
 .form-button {
     width: 100px;
     font-weight: bold;
     padding: 10px;
+    border-radius: 10px;
+    border: none;
 }
 
 #localização {
@@ -388,17 +367,6 @@ li {
     text-align: center;
     margin-top: 80px;
     text-shadow: 0px 0px 7px #EA5D10;
-}
-
-#localização::after {
-    content: '';
-    width: 200px;
-    height: 4px;
-    background-color: #EA5D10;
-    display: block;
-    margin: auto;
-    margin-top: 10px;
-    border-radius: 40%;
 }
 
 .maps {
@@ -529,7 +497,7 @@ footer {
 }
 
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 810px) {
 
     body {
         margin: auto;
@@ -544,10 +512,16 @@ footer {
     .title {
         font-size: 30px;
     }
+
+    .sobre-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+ 
     
     .rally {
-        margin-left: 50%;
-        transform: translateX(-50%);
+        border-radius: 10px;
     }
 
     .whatsapp-fixed {
@@ -562,10 +536,12 @@ footer {
 
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 620px) {
 
     .buttonwhats {
-        width: 80%;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: auto;
     }
 
 }
