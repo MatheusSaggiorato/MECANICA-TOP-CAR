@@ -57,18 +57,41 @@ li {
     list-style: none;
     padding: 5px;
     margin: 5px;
-    border: 1px solid #EA5D10;
-    border-radius: 10px;
+    position: relative;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+}
+
+li:focus,
+link:hover {
+  color: #EA5D10;
+}
+
+li:focus:after,
+li:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+li:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #EA5D10;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
 }
 
 .linksmenu {
     text-decoration: none;
     color: black;
     font-weight: bold;
-}
-
-li:hover {
-    background-color: #EA5D10;
 }
 
 .logo {
@@ -83,47 +106,101 @@ li:hover {
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
     font-weight: bold;
-    margin-top: 30px;
+    margin-top: 100px;
+    margin-bottom: 100px;
     text-shadow: 2px 2px 2px #EA5D10;
 }
 
-.buttonwhats {
+.btn {
     display: flex;
     align-items: center;
-    transform: .2s;
-    overflow: hidden;
-    margin: auto;
-    padding: 8px;
-    width: 35%;
-    height: auto;
-    font-size: 18px;
-    background-color: #EA5D10;
-    cursor: pointer;
-    border-radius: 18px;
+    padding: 15px;
     border: none;
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(28, 35, 41);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    border: none;
+}
+
+/* glow */
+.btn::before {
+    content: "";
+    background: linear-gradient(45deg,
+    #EA5D10, #51ff00, rgb(42, 148, 29), rgb(46,46,46),
+    #EA5D10, #51ff00, rgb(42, 148, 29), rgb(46,46,46));
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+    border: none;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* hover */
+.btn:hover::before {
+    opacity: 1;
+}
+
+.btn:active:after {
+    background: transparent;
+}
+
+
+.btn:active {
+    color: #000;
+    font-weight: bold;
 }
 
 .buttontext {
     text-decoration: none;
+    font-size: 18px;
     color: white;
-    float: right;
-}
-
-.buttonwhats:hover {
-    -ms-transform: scale(1.2);
-    /* IE 9 */
-    -webkit-transform: scale(1.2);
-    /* Safari 3-8 */
-    transform: scale(1.2);
-    box-shadow: 0px 0px 30px #EA5D10;
-    -moz-box-shadow: 0px 0px 30px #EA5D10;
-    -webkit-box-shadow: 0px 0px 30px #EA5D10;
 }
 
 .logo-whats {
     float: left;
     width: 40px;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 #sobre {
@@ -210,7 +287,7 @@ li:hover {
     color: black;
     font-size: 14px;
     height: 100px;
-    background-color: beige;
+    background-color: white;
     margin: 10px;
     border-radius: 10px;
 }
@@ -340,6 +417,17 @@ li:hover {
     border: 1px solid white;
 }
 
+.quadro-contatos:hover {
+    -ms-transform: scale(1.05);
+    /* IE 9 */
+    -webkit-transform: scale(1.05);
+    /* Safari 3-8 */
+    transform: scale(1.05);
+    box-shadow: 0px 0px 30px rgb(94, 94, 94);
+    -moz-box-shadow: 0px 0px 30px rgb(94, 94, 94);
+    -webkit-box-shadow: 0px 0px 30px rgb(94, 94, 94);
+}
+
 .form-control {
     margin: auto;
     display: flex;
@@ -357,6 +445,18 @@ li:hover {
     padding: 10px;
     border-radius: 10px;
     border: none;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari 3-8 */
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px rgb(94, 94, 94);
+    -moz-box-shadow: 0px 0px 30px rgb(94, 94, 94);
+    -webkit-box-shadow: 0px 0px 30px rgb(94, 94, 94);
 }
 
 #localização {
@@ -514,12 +614,12 @@ footer {
     }
 
     .sobre-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
- 
-    
+
+
     .rally {
         border-radius: 10px;
     }
