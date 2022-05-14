@@ -6,11 +6,11 @@ body {
     color: white;
     font-weight: bold;
     background-color: black;
-/*     background-image: url(./images/background3.jpg);
+    background-image: url(./images/background1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; */
+    background-attachment: fixed;
 }
 
 ::-webkit-scrollbar {
@@ -36,15 +36,13 @@ header {
     padding: 5px;
     width: 90%;
     height: 81px;
-    background-color: #ffffff10;
-    backdrop-filter: blur(12px);
-    border-radius: 10px;
+    background-color: black;
     z-index: 999;
 }
 
 #logo {
     width: 70px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 #btn-mobile {
@@ -65,8 +63,8 @@ header {
 }
 
 li {
-    background-color: black;
-    border-radius: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
     float: left;
     margin: 8px;
 }
@@ -151,12 +149,18 @@ link:hover {
     border: none;
 }
 
+/* #EA5D10
+#6AEB46
+#EB661E
+#221EEB
+#3936EB */
+
 /* glow */
 .btn-whats::before {
     content: "";
     background: linear-gradient(45deg,
-            #EA5D10, #51ff00, rgb(42, 148, 29), rgb(46, 46, 46),
-            #EA5D10, #51ff00, rgb(42, 148, 29), rgb(46, 46, 46));
+            #EA5D10, #6AEB46, #EA5D10, #6AEB46,
+            #EA5D10, #6AEB46, #EA5D10, #6AEB46);
     position: absolute;
     top: -2px;
     left: -2px;
@@ -252,6 +256,7 @@ link:hover {
     width: 250px;
     margin-right: 20px;
     margin-bottom: 15px;
+    border-radius: 10px;
 }
 
 #serviços {
@@ -565,15 +570,6 @@ footer {
     animation-direction: alternate;
 }
 
-.whatsapp-fixed:hover {
-    animation-name: anima2;
-    animation-duration: 0.6s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-
-}
-
 .back-to-top {
     position: fixed;
     display: none;
@@ -622,7 +618,7 @@ footer {
         width: 100%;
         top: 65px;
         left: 0px;
-        background: #e7e7e7;
+        background: black;
         transition: 1s;
         z-index: 1000;
         height: 0px;
