@@ -142,18 +142,21 @@ link:hover {
     position: absolute;
     width: 105%;
     height: 105%;
-    background-color: rgb(28, 35, 41);
+    background-color: #1C1D29;
     left: 0;
     top: 0;
     border-radius: 10px;
     border: none;
 }
 
-/* #EA5D10
-#6AEB46
-#EB661E
-#221EEB
-#3936EB */
+/* 
+REGRA DE HARMONIA DE CORES DIVIDIR COMPLEMENTAR DUAS VEZES
+#1C1D29
+#FFF
+#EA5D10 -> COR DE BASE
+#000
+#28A61B
+*/
 
 /* glow */
 .btn-whats::before {
