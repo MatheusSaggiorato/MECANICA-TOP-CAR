@@ -6,11 +6,11 @@ body {
     color: white;
     font-weight: bold;
     background-color: black;
-    background-image: url(./images/background3.jpg);
+/*     background-image: url(./images/background3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed; */
 }
 
 ::-webkit-scrollbar {
@@ -42,62 +42,69 @@ header {
     z-index: 999;
 }
 
-nav {
-    display: flex;
-    align-items: center;
+#logo {
+    width: 70px;
+    border-radius: 10px;
 }
 
-.menu {
+#btn-mobile {
+    display: none;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
     font-size: 18px;
     cursor: pointer;
+    gap: 0.5rem;
+}
+
+#menu a {
+    display: block;
+    padding: .5rem;
 }
 
 li {
+    background-color: black;
+    border-radius: 10px;
     float: left;
-    list-style: none;
-    padding: 5px;
-    margin: 5px;
+    margin: 8px;
+}
+
+.linksmenu {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
     position: relative;
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
     transition-duration: 400ms;
     transition-property: color;
 }
 
-li:focus,
+.linksmenu:focus,
 link:hover {
-  color: #EA5D10;
+    color: #EA5D10;
 }
 
-li:focus:after,
-li:hover:after {
-  width: 100%;
-  left: 0%;
+.linksmenu:focus:after,
+.linksmenu:hover:after {
+    width: 100%;
+    left: 0%;
 }
 
-li:after {
-  content: "";
-  pointer-events: none;
-  bottom: -2px;
-  left: 50%;
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background-color: #EA5D10;
-  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition-duration: 400ms;
-  transition-property: width, left;
-}
-
-.linksmenu {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-}
-
-.logo {
-    float: left;
-    width: 70px;
-    border-radius: 10px;
+.linksmenu:after {
+    content: "";
+    pointer-events: none;
+    bottom: -5px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #EA5D10;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
 }
 
 .title {
@@ -106,12 +113,14 @@ li:after {
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
     font-weight: bold;
+    width: 90%;
+    margin: auto;
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
     text-shadow: 2px 2px 2px #EA5D10;
 }
 
-.btn {
+.btn-whats {
     display: flex;
     align-items: center;
     padding: 15px;
@@ -123,17 +132,18 @@ li:after {
     cursor: pointer;
     position: relative;
     z-index: 0;
-    border-radius: 12px;
+    border-radius: 10px;
     margin-left: 50%;
     transform: translateX(-50%);
+    background-color: rgb(28, 35, 41);
 }
 
-.btn::after {
+.btn-whats::after {
     content: "";
     z-index: -1;
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 105%;
+    height: 105%;
     background-color: rgb(28, 35, 41);
     left: 0;
     top: 0;
@@ -142,18 +152,18 @@ li:after {
 }
 
 /* glow */
-.btn::before {
+.btn-whats::before {
     content: "";
     background: linear-gradient(45deg,
-    #EA5D10, #51ff00, rgb(42, 148, 29), rgb(46,46,46),
-    #EA5D10, #51ff00, rgb(42, 148, 29), rgb(46,46,46));
+            #EA5D10, #51ff00, rgb(42, 148, 29), rgb(46, 46, 46),
+            #EA5D10, #51ff00, rgb(42, 148, 29), rgb(46, 46, 46));
     position: absolute;
     top: -2px;
     left: -2px;
     background-size: 600%;
     z-index: -1;
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
+    width: calc(100% + 20px);
+    height: calc(100% + 10px);
     filter: blur(8px);
     animation: glowing 20s linear infinite;
     transition: opacity .3s ease-in-out;
@@ -177,16 +187,16 @@ li:after {
 }
 
 /* hover */
-.btn:hover::before {
+.btn-whats:hover::before {
     opacity: 1;
 }
 
-.btn:active:after {
+.btn-whats:active:after {
     background: transparent;
 }
 
 
-.btn:active {
+.btn-whats:active {
     color: #000;
     font-weight: bold;
 }
@@ -440,9 +450,10 @@ li:after {
 }
 
 .form-button {
-    width: 100px;
-    font-weight: bold;
     padding: 10px;
+    width: 90%;
+    font-size: 16px;
+    font-weight: bold;
     border-radius: 10px;
     border: none;
     cursor: pointer;
@@ -597,7 +608,7 @@ footer {
 }
 
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 850px) {
 
     body {
         margin: auto;
@@ -605,8 +616,68 @@ footer {
         width: 100%;
     }
 
-    .logo {
-        float: none;
+    #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 65px;
+        left: 0px;
+        background: #e7e7e7;
+        transition: 1s;
+        z-index: 1000;
+        height: 0px;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #nav.active #menu {
+        height: auto;
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    #menu a {
+        margin: 0 1rem;
+    }
+
+    #btn-mobile {
+        display: flex;
+        font-size: 22px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 0.5rem;
+        color: white;
+    }
+
+    #hamburger {
+        border-top: 2px solid;
+        width: 30px;
+    }
+
+    #hamburger::after,
+    #hamburger::before {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 7px;
+        transition: 0.3s;
+        position: relative;
+    }
+
+    #nav.active #hamburger {
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburger::before {
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -8px;
     }
 
     .title {
@@ -619,8 +690,8 @@ footer {
         justify-content: center;
     }
 
-
     .rally {
+        width: 350px;
         border-radius: 10px;
     }
 
@@ -633,15 +704,17 @@ footer {
         color: white;
         float: right;
     }
-
 }
 
-@media screen and (max-width: 620px) {
 
-    .buttonwhats {
+@media screen and (max-width: 550px) {
+
+    .btn-whats {
+        display: flex;
+        align-items: center;
         padding-left: 20px;
         padding-right: 20px;
-        width: auto;
+        width: 90%;
     }
 
 }

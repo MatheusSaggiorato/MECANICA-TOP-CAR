@@ -16,10 +16,14 @@
 
 <body>
 
-    <header>
-        <img class="logo" src="images/logooriginal.png" alt="logo mecânica top car">
-        <nav>
-            <ul class="menu">
+    <header id="header">
+        <img id="logo" src="images/logooriginal.png" alt="logo mecânica top car">
+        <nav id="nav">
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                aria-expanded="false">MENU
+                <span id="hamburger"></span>
+            </button>
+            <ul id="menu" role="menu">
                 <li><a class="linksmenu" href="#sobre">SOBRE</li></a>
                 <li><a class="linksmenu" href="#serviços">SERVIÇOS</li></a>
                 <li><a class="linksmenu" href="#clientes">CLIENTES</li></a>
@@ -29,9 +33,9 @@
         </nav>
     </header>
 
-    <h1 class="title">TÍTULO DA PÁGINA!</h1>
+    <h1 class="title">A paixão pelo que fazemos é a nossa principal ferramenta!</h1>
 
-    <button class="btn">
+    <button class="btn-whats">
         <img class="logo-whats" src="images/WhatsApp.png" alt="button WhatsApp">
         <a class="buttontext" href="https://api.whatsapp.com/send?phone=5554999748017&text=Texto%20aqui"
             target="_blank">
@@ -244,6 +248,8 @@
     </a>
 
     <div class="back-to-top"></div>
+
+    <script src="./script.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
