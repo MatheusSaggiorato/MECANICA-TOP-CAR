@@ -24,11 +24,11 @@
                 <span id="hamburger"></span>
             </button>
             <ul id="menu" role="menu">
-                <li><a class="linksmenu" href="#sobre">SOBRE</li></a>
-                <li><a class="linksmenu" href="#serviços">SERVIÇOS</li></a>
-                <li><a class="linksmenu" href="#clientes">CLIENTES</li></a>
-                <li><a class="linksmenu" href="#contato">CONTATO</li></a>
-                <li><a class="linksmenu" href="#localização">LOCALIZAÇÃO</li></a>
+                <li><a class="linksMenu" href="#serviços">SERVIÇOS</li></a>
+                <li><a class="linksMenu" href="#sobre">SOBRE</li></a>
+                <li><a class="linksMenu" href="#clientes">CLIENTES</li></a>
+                <li><a class="linksMenu" href="#contato">CONTATO</li></a>
+                <li><a class="linksMenu" href="#localização">LOCALIZAÇÃO</li></a>
             </ul>
         </nav>
     </header>
@@ -182,21 +182,23 @@
         </section>
 
         <p class="text-contato">
-            Deixe sua mensagem que entraremos em contato o mais breve possível.
+            Deixe sua mensagem que entraremos em contato.
         </p>
 
-        <form action="contatoenvia" method="post">
-            <input type="hidden" name="resultado" value="7">
-            <input type="text" name="nome" class="form-control" id="name" placeholder="*Nome"
-                data-msg="Campo Obrigátorio" required="required">
-            <input type="email" class="form-control" name="email" id="email" placeholder="*E-mail" data-rule="email"
-                data-msg="Campo obrigatório com e-mail válido" required="required">
-            <input type="tel" class="form-control" name="fone" attrname="telephone1" id="subject"
-                placeholder="*Telefone" data-rule="minlen:4" data-msg="Campo obrigatório" required="required">
-            <textarea class="form-control" name="mensagem" rows="5" data-rule="required" data-msg="Campo obrigatório"
-                placeholder="*Mensagem" required="required"></textarea>
-            <button class="form-button">Enviar</button>
-        </form>
+        <div class="formContainer">
+            <form action="contatoenvia" method="post" class="form">
+                <input type="hidden" name="resultado" value="7">
+                <input type="text" name="nome" class="form-control" id="name" placeholder="*Nome"
+                    data-msg="Campo Obrigátorio" required="required">
+                <input type="email" class="form-control" name="email" id="email" placeholder="*E-mail" data-rule="email"
+                    data-msg="Campo obrigatório com e-mail válido" required="required">
+                <input type="tel" class="form-control" name="fone" attrname="telephone1" id="subject"
+                    placeholder="*Telefone" data-rule="minlen:4" data-msg="Campo obrigatório" required="required">
+                <textarea class="form-control" name="mensagem" rows="5" data-rule="required"
+                    data-msg="Campo obrigatório" placeholder="*Mensagem" required="required"></textarea>
+                <button class="form-button">Enviar</button>
+            </form>
+        </div>
     </section>
 
 
@@ -249,26 +251,10 @@
 
     <div class="back-to-top"></div>
 
-    <script src="./script.js"></script>
-
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="./script.js"></script>
     <script>
-        $(document).ready(function () {
-            // esconde e mostra o btn
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 200) { // distancia que tem que rolar antes de aparecer
-                    $('.back-to-top').fadeIn(250);
-                } else {
-                    $('.back-to-top').fadeOut(250);
-                }
-            });
-            // manda pro topo
-            $('.back-to-top').click(function (event) {
-                event.preventDefault();
-                $('html, body').animate({ scrollTop: 0 }, 1200);
-            });
 
-        });
     </script>
 </body>
 
